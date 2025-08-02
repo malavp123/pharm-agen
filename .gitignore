@@ -1,0 +1,56 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Python packaging
+*.egg
+*.egg-info/
+dist/
+build/
+*.manifest
+*.spec
+
+# MyPy, Pytest, Coverage, Profiling
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.prof
+
+# Notebooks and outputs (optional)
+*.nbconvert.ipynb
+
+# Test/output data (if temporary)
+output/
+temp/
+*.tmp
+
+# GitHub secret token dumps or credentials (you never know)
+.env
+*.env
+secrets.yaml

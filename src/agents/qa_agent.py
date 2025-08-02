@@ -1,9 +1,13 @@
 
 import openai
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 class QAAgent:
-    def __init__(self, model_name="gpt-3.5-turbo", openai_api_key=None):
+    def __init__(self, model_name="gpt-4o-mini", openai_api_key=OPENAI_API_KEY):
         self.model_name = model_name
         self.api_key = openai_api_key or os.getenv("OPENAI_API_KEY")
         if not self.api_key:
@@ -14,8 +18,12 @@ class QAAgent:
     def build_prompt(self, query, context_chunks):
         context_str = "\n---\n".join(context_chunks)
         return (
+            f"You must only answer based on the given context.\n"
             f"You are a helpful assistant for biomedical research questions.\n"
+            f"Explain in simpler terms rather than more complex explainations.\n"
+            f"Do not make up information. If the answer is unclear or incomplete, say 'The information is not available in the provided context.'\n"
             f"Given the following document excerpts, answer the user's question.\n\n"
+            f"Limit your answer to under 150 words.\n\n"
             f"Context:\n{context_str}\n\n"
             f"Question: {query}\n\n"
             f"Answer:"
