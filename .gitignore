@@ -53,5 +53,6 @@ temp/
 # GitHub secret token dumps or credentials (you never know)
 .env
 *.env
+token.*
 secrets.yaml
 credentials.json
