@@ -20,10 +20,8 @@ class QAAgent:
         return (
             f"You must only answer based on the given context.\n"
             f"You are a helpful assistant for biomedical research questions.\n"
-            f"Explain in simpler terms rather than more complex explainations.\n"
             f"Do not make up information. If the answer is unclear or incomplete, say 'The information is not available in the provided context.'\n"
             f"Given the following document excerpts, answer the user's question.\n\n"
-            f"Limit your answer to under 150 words.\n\n"
             f"Context:\n{context_str}\n\n"
             f"Question: {query}\n\n"
             f"Answer:"
