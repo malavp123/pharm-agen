@@ -18,8 +18,8 @@ class QAAgent:
     def build_prompt(self, query, context_chunks):
         context_str = "\n---\n".join(context_chunks)
         return (
-            f"You must only answer based on the given context.\n"
             f"You are a helpful assistant for biomedical research questions.\n"
+            f"You must only answer based on the given context.\n"
             f"Do not make up information. If the answer is unclear or incomplete, say 'The information is not available in the provided context.'\n"
             f"Given the following document excerpts, answer the user's question.\n\n"
             f"Context:\n{context_str}\n\n"
